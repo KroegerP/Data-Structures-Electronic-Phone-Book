@@ -27,12 +27,13 @@ struct BinarySearchTree {
     public:
         BinarySearchTree();
         BinarySearchTree(Person);
+        void add(Person *person){}
 };
 
 class Book {
     public:
         void Add(Person *person) {
-
+            BST.add(*person);
         };
         void Delete(Person *person){
 
@@ -50,7 +51,7 @@ class Book {
 
         };
     private:
-        Person personData;
+        BinarySearchTree BST;
 
 };
 
