@@ -25,7 +25,7 @@ class Person {
         string GetFirstName() {
             return firstName;
         }
-        int GetNumber() {
+        int GetNumber() {           // Helper member functions for accessing data members
             return number;
         }
         void SetNumber(int value) {
@@ -133,8 +133,6 @@ class Book {
         friend class Node;
         friend class Person;
         Node* root;
-        
-
 };
 
 void Book :: Add(Person* newPerson)  { // Recursively find the location to add the new person based on last/first name      
@@ -239,7 +237,7 @@ class UserInterface {
 int PhoneNumberCheck(bool newNum) {
     int phoneNumber = NULL;
     while(phoneNumber == NULL) {
-        newNum ? cout << "New Phone Number: " : cout << "Phone Number: ";
+        newNum ? cout << "New Phone Number: " : cout << "Phone Number: ";   // Flexibility for adding a new person or changing an existing number
         cin >> phoneNumber;
         if(phoneNumber < 999999) {  // If it is less than this, the phone number will have less than 7 digits
             cout << "ERROR: Phone number must be at least 7 digits long!" << endl;
@@ -268,8 +266,9 @@ int main()
     char ans = u.FileRestore();
 
     if(toupper(ans) == 'Y') {
-        cout << "Enter the name of the text file: ";
+        cout << "Enter the name of the text file without the extension: ";
         cin >> textFile;
+        textFile.append(".txt");
         PhoneBook.RestoreTree(textFile);
     }
 
