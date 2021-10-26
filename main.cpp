@@ -207,7 +207,7 @@ Node* Book :: Find(Node* root, string last, string first){ // In PSN
         }
         // Found
         else{
-            cout << first << " " << last << " has been found in the phone book. Their phone number is: ";
+            cout << first << " " << last << " has been found in the phone book. Their phone number is: " << root -> person.GetNumber() << endl;
             return root;
             cout << endl << endl;
         }
