@@ -7,7 +7,6 @@
 #include <string.h>
 #include <fstream>
 #include <stack>
-#include <sstream>
 
 using namespace std;
 
